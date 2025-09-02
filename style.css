@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.nhin_cai_gi {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  text-align: center;
+  color: white;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #00c6ff, 0 0 20px #0072ff;
+  }
+  50% {
+    box-shadow: 0 0 25px #00c6ff, 0 0 40px #0072ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #00c6ff, 0 0 20px #0072ff;
+  }
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+label {
+  float:left;
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#dn {
+  opacity: 30%;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a{
+  display: block;  
+  margin-top: 10px;   
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color:aliceblue; 
+}
