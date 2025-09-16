@@ -1,4 +1,4 @@
-const correctUsername = "@##Long##@Viet@##Duy@###Nhan";
+const correctUsername = "AnhLong";
 const correctPassword = "1m6";
 
 function checkLogin() {
