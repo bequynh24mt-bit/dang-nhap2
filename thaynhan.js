@@ -1,22 +1,26 @@
-const correctUsername = "@##Long##@Viet@##Duy@###Nhan";
-const correctPassword = "thaynhan1m6";
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
 
-function checkLogin() {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  if (username === correctUsername && password === correctPassword) {
-    window.location.href = "tc.html";
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+  res.send(`
+    <form method="POST" action="/login">
+      <input name="username" placeholder="Username"><br>
+      <input name="password" type="password" placeholder="Password"><br>
+      <button type="submit">Login</button>
+    </form>
+  `);
+});
+
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+  if (username === "AnhLong" && password === "1m6") {
+    res.redirect("/tc.html"); 
   } else {
-    alert("Bạn nhập sai! Admin đang quan sát bạn 👀");
-  }
-}
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
-    e.preventDefault();
+    res.send("Sai mật khẩu!");
   }
 });
 
-document.addEventListener("contextmenu", function (e) {
-  e.preventDefault();
-});
+app.listen(3000, () => console.log("Server chạy tại http://localhost:3000"));
