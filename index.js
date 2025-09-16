@@ -14,11 +14,10 @@ function checkLogin() {
 document.addEventListener("keydown", function (e) {
   if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
     e.preventDefault();
-    alert("Không được phép!");
   }
 });
 
 document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
-  alert("Chuột phải bị vô hiệu!");
+
 });
